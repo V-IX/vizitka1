@@ -1,0 +1,34 @@
+/* reset */
+
+a {color: #ee1b2e;}
+
+::selection {background: #ee1b2e;}
+
+.btn {
+	background: #ee1b2e;
+	border-bottom-color: #ca0012;
+}
+
+.btn:hover {background: #ca0012;}
+
+.form-input:focus {border-color: #ee1b2e;}
+
+/* template */
+
+.logo {background: #ee1b2e;}
+
+.header-open .fa {color: #ee1b2e;}
+
+.header-contacts .email {color: #ee1b2e;}
+
+.breadcrumbs {color: #ee1b2e;}
+
+.pagination span.num {background: #ee1b2e;}
+
+/* content */
+
+.home-form {
+	background: #ee1b2e;
+	border-bottom: 5px solid #ca0012;
+}
+

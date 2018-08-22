@@ -1,0 +1,33 @@
+/* reset */
+
+a {color: #25acc4;}
+
+::selection {background: #25acc4;}
+
+.btn {
+	background: #25acc4;
+	border-bottom-color: #1f8da0;
+}
+
+.btn:hover {background: #1f8da0;}
+
+.form-input:focus {border-color: #25acc4;}
+
+/* template */
+
+.logo {background: #25acc4;}
+
+.header-open .fa {color: #25acc4;}
+
+.header-contacts .email {color: #25acc4;}
+
+.breadcrumbs {color: #25acc4;}
+
+.pagination span.num {background: #25acc4;}
+
+/* content */
+
+.home-form {
+	background: #25acc4;
+	border-bottom: 5px solid #1f8da0;
+}

@@ -1,0 +1,34 @@
+/* reset */
+
+a {color: #e87e04;}
+
+::selection {background: #e87e04;}
+
+.btn {
+	background: #e87e04;
+	border-bottom-color: #d27000;
+}
+
+.btn:hover {background: #d27000;}
+
+.form-input:focus {border-color: #e87e04;}
+
+/* template */
+
+.logo {background: #e87e04;}
+
+.header-open .fa {color: #e87e04;}
+
+.header-contacts .email {color: #e87e04;}
+
+.breadcrumbs {color: #e87e04;}
+
+.pagination span.num {background: #e87e04;}
+
+/* content */
+
+.home-form {
+	background: #e87e04;
+	border-bottom: 5px solid #d27000;
+}
+
