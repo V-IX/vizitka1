@@ -8,7 +8,7 @@
 				<? if($pageinfo['brief'] != '') { ?><div class="page-descr"><?=$pageinfo['brief'];?></div><? } ?>
 			</div>
 			<div class="row">
-				<div class="col-7">
+				<div class="col-7 contact_top">
 					<div class="h4 bold mb15">
 						<div class="phone"><?=fa('phone fa-fw text-gray mr5');?> <?=phone($siteinfo['phone'], $siteinfo['phoneMask']);?></div>
 						<? if($siteinfo['phone2'] != '') { ?><div class="phone mt5"><?=fa('phone fa-fw text-gray mr5');?> <?=phone($siteinfo['phone2'], $siteinfo['phone2Mask']);?></div><? } ?>
@@ -28,7 +28,7 @@
 					<? } ?>
 					<div class="small text-gray mb15"><?=nl2br($siteinfo['details']);?></div>
 				</div>
-				<div class="col-5">
+				<div class="col-5 contact_bottom">
 					<?=form_open('contacts/ajaxSend', array('data-toggle' => 'ajaxForm', 'class' => 'contacts-form'));?>
 						<div class="home-title">Остались вопросы?</div>
 						<div class="home-text mb15">Закажите консультацию нашего специалиста и мы Вам перезвоним!</div>
