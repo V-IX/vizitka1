@@ -10,23 +10,24 @@
 			<ul class="publications-list">
 			<? foreach($items as $item) { ?>
 				<li>
-					<div class="publications-item">
-						<div class="row">
+				<a href="<?=base_url('publications/'.$item['alias']);?>" class="publications-item">
+				    <div class="row">
 						<? if($siteinfo['showImg'] == 1) { ?>
 							<div class="col-3">
-								<a href="<?=base_url('publications/'.$item['alias']);?>" class="publications-item">
 									<?=check_img('assets/uploads/publications/thumb/'.$item['img'], array('alt' => $item['title'], 'class' => 'block wide'));?>
-								</a>
 							</div>
 						<? } ?>
 							<div class="col-<?=$siteinfo['showImg'] == 1 ? 9 : 12;?>">
 								<div class="h4 bold mb5"><?=$item['title'];?></div>
 								<div class="text-gray small mb10"><?=fa('calendar mr5');?> <?=translate_date($item['addDate']);?></div>
+
 								<div class="mb10 h6"><?=$item['brief'];?></div>
-								<a href="<?=base_url('publications/'.$item['alias']);?>" class="bold">Подробнее</a>
+								<!--
+								<span>Подробнее</span>
+                                -->
 							</div>
-						</div>
 					</div>
+                </a>
 				</li>
 			<? } ?>
 			</ul>

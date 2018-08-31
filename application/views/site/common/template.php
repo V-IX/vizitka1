@@ -12,28 +12,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <?=link_tag('assets/plugins/font-awesome/css/font-awesome.min.css');?>
-        <?=link_tag('assets/plugins/font-ptsans/font.css');?>
-            <?=link_tag('assets/plugins/font-ptsanscaption/font.css');?>
-                <?=link_tag('assets/site/css/reset.css');?>
-                    <?=link_tag('assets/site/css/template.css');?>
-                        <?=link_tag('assets/site/css/content.css');?>
-                            <?=link_tag(array('href' => 'assets/site/colors/azure.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'id' => 'colorCss'));?>
+    <?=link_tag('assets/plugins/font-ptsans/font.css');?>
+    <?=link_tag('assets/plugins/font-ptsanscaption/font.css');?>
+    <?=link_tag('assets/site/css/reset.css');?>
+    <?=link_tag('assets/site/css/template.css');?>
+    <?=link_tag('assets/site/css/content.css');?>
+    <?=link_tag(array('href' => 'assets/site/colors/azure.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'id' => 'colorCss'));?>
 
-                                <?=link_tag('favicon.ico', 'shortcut icon', 'image/ico');?>
-                                    <?=link_tag('favicon.ico', 'shortcut', 'image/ico');?>
+    <?=link_tag('favicon.ico', 'shortcut icon', 'image/ico');?>
+    <?=link_tag('favicon.ico', 'shortcut', 'image/ico');?>
 
-                                        <?=script('assets/plugins/jquery/jquery-1.9.1.min.js');?>
-                                            <?=script('assets/plugins/jquery.mask/jquery.maskedinput.js');?>
-                                                <?=script('assets/plugins/bpopup/jquery.bpopup.min.js');?>
-                                                    <?=script('assets/plugins/ajaxForm/form.js');?>
-                                                        <?=script('assets/site/js/js.js');?>
+    <?=script('assets/plugins/jquery/jquery-1.9.1.min.js');?>
+    <?=script('assets/plugins/jquery.mask/jquery.maskedinput.js');?>
+    <?=script('assets/plugins/bpopup/jquery.bpopup.min.js');?>
+    <?=script('assets/plugins/ajaxForm/form.js');?>
+    <?=script('assets/site/js/js.js');?>
 
-                                                            <? $csrf = $this->security->get_csrf_hash();?>
-                                                                <script>
-                                                                    base_url = "<?=base_url()?>"
-                                                                    csrf_test_name = "<?=$csrf;?>"
-
-                                                                </script>
+    <? $csrf = $this->security->get_csrf_hash();?>
+    <script>
+            base_url= "<?=base_url()?>"
+            csrf_test_name = "<?=$csrf;?>"
+    </script>
 
 </head>
 
@@ -55,6 +54,7 @@
                             <span>Заказать звонок</span>
                     </a>
                     <div class="header-contacts">
+                        <a href="javascript:void(0)" class="header-center-btn">Показать контакты</a>
                         <div class="row mb5">
                             <div class="col-6 phone _1">
                                 <?=phone($siteinfo['phone'], $siteinfo['phoneMask']);?>
@@ -75,8 +75,8 @@
                     <div class="tmenu-btn">
                         <a href="javascript:void(0)" class="tmenuBtn">
                             <?=fa('bars')?>
+                            <span>Меню сайта</span>
                         </a>
-                        <a href="javascript:void(0)" class="tmenuBtn tmenuText">Меню сайта</a>
                     </div>
                 </div>
             </div>
@@ -86,17 +86,17 @@
                         <ul>
                             <? foreach($tmenu as $_tmenu) { ?>
                                 <li>
-                                    <div class="item">
-                                        <a href="<?=base_url($_tmenu['link']);?>"><span><?=$_tmenu['title'];?></span></a>
-                                        <? if(!empty($_tmenu['child'])) { ?>
-                                            <ul class="submenu">
-                                                <? foreach($_tmenu['child'] as $_tchild) { ?>
-                                                    <li>
-                                                        <?=anchor($_tchild['link'], $_tchild['title'], array('target' => $_tchild['target']));?>
-                                                    </li>
-                                                    <? } ?>
-                                            </ul>
-                                            <? } ?>
+                                <div class="item">
+                                    <a href="<?=base_url($_tmenu['link']);?>"><span><?=$_tmenu['title'];?></span></a>
+                                    <? if(!empty($_tmenu['child'])) { ?>
+                                    <ul class="submenu">
+                                    <? foreach($_tmenu['child'] as $_tchild) { ?>
+                                    <li>
+                                    <?=anchor($_tchild['link'], $_tchild['title'], array('target' => $_tchild['target']));?>
+                                    </li>
+                                    <? } ?>
+                                    </ul>
+                                    <? } ?>
                                     </div>
                                 </li>
                                 <? } ?>
@@ -139,6 +139,7 @@
                             <div class="developer">Разработка и продвижение <a href="http://narisuemvse.by" target="_blank">Narisuemvse.by</a></div>
                         </div>
                         <div class="col-4 footer-menu">
+                            <a href="javascript:void(0)" class="footer-center-btn">Показать меню</a>
                             <div class="row">
                                 <? foreach($fmenu as $_fmenu) { ?>
                                     <div class="col-6">

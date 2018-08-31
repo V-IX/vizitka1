@@ -22,7 +22,7 @@
 						<div class=""><?=fa('map-marker fa-fw text-gray mr5');?><?=$siteinfo['adres'];?></div>
 					</div>
 					<? if($siteinfo['map'] != '') { ?>
-					<div class="mb15">
+					<div class="mb15 maap">
 						<?=htmlspecialchars_decode($siteinfo['map']);?>
 					</div>
 					<? } ?>
